@@ -98,7 +98,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5y9-Ub-fCj">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5y9-Ub-fCj">
                                 <rect key="frame" x="131" y="444" width="203" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="hUG-fs-zfi"/>
@@ -111,6 +111,9 @@
                                     <segment title="none"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="decimalSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="fIe-xR-hKc"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -143,6 +146,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="decimalSegment" destination="5y9-Ub-fCj" id="cKb-Nd-rPi"/>
                         <outlet property="formulaPicker" destination="jYo-6x-wUh" id="dV0-iT-e4U"/>
                         <outlet property="fromUnitLabel" destination="ETB-Dq-Mig" id="lAd-wP-Gml"/>
                         <outlet property="resultsLabel" destination="rlT-4I-KSO" id="LXh-28-5PV"/>
